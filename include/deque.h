@@ -20,11 +20,11 @@ deque* deque_create_with_capacity(size_t element_size, size_t capacity);
 void deque_destroy(deque* q);
 
 void deque_push_last(deque* q, void* element);
-void* deque_pop_last(deque* q);
+void deque_pop_last(deque* q, void* ret);
 void* deque_peek_last(deque* q);
 
 void deque_push_first(deque* q, void* element);
-void* deque_pop_first(deque* q);
+void deque_pop_first(deque* q, void* ret);
 void* deque_peek_first(deque* q);
 
 size_t deque_size(deque* q);

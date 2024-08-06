@@ -16,7 +16,7 @@ int main() {
     printf("%d ", *(int *)array_at(arr, 0));
     printf("%d ", *(int *)array_at(arr, 1));
     printf("%d\n", *(int *)array_at(arr, 2));
-    array_pop_back(arr);
+    array_pop_back(arr, NULL);
     printf("%d ", *(int *)array_at(arr, 0));
     printf("%d\n", *(int *)array_at(arr, 1));
     array_set(arr, 0, &c);
@@ -34,7 +34,7 @@ int main() {
     printf("%s", (char *)array_at(arr3, 0));
     printf("%s", (char *)array_at(arr3, 1));
     printf("%s\n", (char *)array_at(arr3, 2));
-    array_pop_back(arr3);
+    array_pop_back(arr3, NULL);
     printf("%s", (char *)array_at(arr3, 0));
     printf("%s\n", (char *)array_at(arr3, 1));
     array_destroy(arr3);

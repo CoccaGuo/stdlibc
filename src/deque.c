@@ -48,18 +48,27 @@ void deque_push_last(deque* q, void* element) {
     q->deque_size++;
 }
 
-void* deque_pop_first(deque* q) {
-    void* element = deque_peek_first(q);
+void deque_pop_first(deque* q, void* ret) {
+    // void* element = deque_peek_first(q);
+    // q->front = (q->front + 1) % q->data->capacity;
+    // q->deque_size--;
+    // return element;
+    if (q->deque_size == 0) {
+        return;
+    }
+    if (ret != NULL)
+        memcpy(ret, deque_peek_first(q), q->data->element_size);
     q->front = (q->front + 1) % q->data->capacity;
     q->deque_size--;
-    return element;
 }
 
-void* deque_pop_last(deque* q) {
-    void* element = deque_peek_last(q);
-    q->front = (q->front + 1) % q->data->capacity;
+void deque_pop_last(deque* q, void* ret) {
+    if (q->deque_size == 0) {
+        return;
+    }
+    if (ret != NULL)
+        memcpy(ret, deque_peek_last(q), q->data->element_size);
     q->deque_size--;
-    return element;
 }
 
 void* deque_peek_first(deque* q) {

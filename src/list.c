@@ -62,7 +62,7 @@ void list_push_front(list *l, void *element) {
     l->size++;
 }
 
-void *list_pop_back(list *l) {
+void * list_pop_back(list *l) {
     if (l->size == 0) {
         return NULL;
     }

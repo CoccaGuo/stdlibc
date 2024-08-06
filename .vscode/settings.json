@@ -11,6 +11,9 @@
         "type_traits": "c",
         "utility": "c",
         "queue.h": "c",
-        "array.h": "c"
+        "array.h": "c",
+        "deque.h": "c",
+        "priority_queue.h": "c",
+        "utils.h": "c"
     }
 }

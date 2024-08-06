@@ -12,7 +12,7 @@ typedef deque queue;
 #define  queue_destroy(q)           deque_destroy(q)
 
 #define  queue_push(q, element)     deque_push_last(q, element)
-#define  queue_pop(q)               deque_pop_first(q)
+#define  queue_pop(q, ret)               deque_pop_first(q, ret)
 #define  queue_peek(q)              deque_peek_first(q)
 
 #define  queue_size(q)              deque_size(q)

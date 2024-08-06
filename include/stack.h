@@ -11,7 +11,7 @@ typedef deque stack;
 
 #define stack_destroy(q)           deque_destroy(q)
 #define stack_push(q, element)     deque_push_last(q, element)
-#define stack_pop(q)               deque_pop_last(q)
+#define stack_pop(q, ret)               deque_pop_last(q, ret)
 
 #define stack_size(q)              deque_size(q)
 #define stack_empty(q)             deque_empty(q)
